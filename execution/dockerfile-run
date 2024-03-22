@@ -1,0 +1,21 @@
+FROM ethereum/client-go:v1.13.14
+
+WORKDIR /root
+
+COPY ./execution/entrypoint.sh /entrypoint.sh
+
+# 스크립트 실행 권한 부여
+RUN chmod +x /entrypoint.sh
+
+# ENTRYPOINT로 스크립트를 실행합니다.
+ENTRYPOINT ["/entrypoint.sh"]
+
+# COPY genesis.json genesis.json
+# COPY script.sh /script.sh
+
+# RUN geth init ./genesis.json
+
+# RUN chmod +x /script.sh
+
+# ENTRYPOINT ["/script.sh"]
+# ENTRYPOINT ["chmod","+x","/script.sh","/script.sh"]
