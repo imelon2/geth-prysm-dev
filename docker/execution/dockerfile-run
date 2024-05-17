@@ -1,6 +1,5 @@
 FROM ethereum/client-go:v1.14.2
 
-# COPY ./entrypoint.sh /entrypoint.sh
 COPY ./script.sh /script.sh
 
 # 스크립트 실행 권한 부여

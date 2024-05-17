@@ -1,0 +1,1 @@
+scripts에는 `geth init`이 생략되어 있습니다. geth.sh 실행 전, 꼭 `geth init --datadir ./execution/data genesis.json`를 선행해야합니다.
